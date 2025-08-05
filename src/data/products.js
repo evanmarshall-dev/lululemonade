@@ -8,7 +8,7 @@ export const products = [
     name: 'Regular Lemonade"',
     price: 2,
     description:
-      "Buttery-soft and weightless, the Nulu™ fabric is perfect for your everyday flows and yoga practice.",
+      "The classic lemonade made with ice to keep you cool on a hot summer day!",
     imageUrl: regularLemonade,
   },
   {
@@ -16,7 +16,7 @@ export const products = [
     name: "Raspberry Lemonade",
     price: 2,
     description:
-      "A classic, slim-fit jacket made with cottony-soft Luon™ fabric that's perfect for layering.",
+      "The classic lemonade with a twist. If you love the tangy flavour of raspberry you will want this lemonade with a burst of raspberry!",
     imageUrl: raspberryLemonade,
   },
   {
@@ -24,7 +24,7 @@ export const products = [
     name: "Watermelon Lemonade",
     price: 2,
     description:
-      "An oversized, cozy hoodie with a half-zip closure, made from soft, breathable fabric.",
+      "Not just an infusion of flavour in this one. It was made by mixing the classic lemonade with a watermelon punch. If you enjoy a scientific masterpiece of flavour you will want to gulp down this one!",
     imageUrl: raspberryLemonade,
   },
 ];
