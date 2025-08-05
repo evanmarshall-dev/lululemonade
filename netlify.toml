@@ -1,0 +1,11 @@
+# Netlify build configuration
+[build]
+  command = "pnpm run build" # Use the build command from your package.json
+  publish = "dist"           # The directory Vite builds to
+  functions = "netlify/functions" # The directory for your serverless functions
+
+# This redirect rule is crucial for single-page applications (SPAs)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

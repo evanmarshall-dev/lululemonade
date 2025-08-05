@@ -1,0 +1,14 @@
+.order-confirmation-page {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
