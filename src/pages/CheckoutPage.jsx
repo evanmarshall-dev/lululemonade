@@ -12,21 +12,23 @@ const CheckoutPage = () => {
   const [clientSecret, setClientSecret] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { getCartTotal } = useCart();
-  const cartTotal = getCartTotal();
+  // Assuming useCart() provides the items in the cart
+  const { cartItems, getCartTotal } = useCart();
 
   useEffect(() => {
     const API_ENDPOINT = import.meta.env.DEV
       ? "http://localhost:4242/create-payment-intent"
       : "/.netlify/functions/create-payment-intent";
 
-    if (cartTotal > 0) {
+    // Create PaymentIntent as soon as the page loads with cart items
+    if (cartItems && cartItems.length > 0) {
       setIsLoading(true);
       setError(null);
       fetch(API_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: cartTotal * 100 }), // Amount in cents
+        // Send cart items to the server for secure price calculation
+        body: JSON.stringify({ items: cartItems }),
       })
         .then(async (res) => {
           if (!res.ok) {
@@ -50,7 +52,7 @@ const CheckoutPage = () => {
     } else {
       setIsLoading(false);
     }
-  }, [cartTotal]);
+  }, [cartItems]);
 
   const appearance = {
     theme: "stripe",
@@ -64,6 +66,7 @@ const CheckoutPage = () => {
     <div className="checkout-page">
       <h1>Checkout</h1>
       <div className="checkout-form-container">
+        <h2>Total: ${getCartTotal().toFixed(2)}</h2>
         {isLoading && <p>Loading payment form...</p>}
         {error && <p className="error-message">Error: {error}</p>}
         {!isLoading && !error && clientSecret && (

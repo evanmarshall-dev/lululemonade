@@ -16,12 +16,40 @@ app.use(
   })
 );
 
+// Product data is defined on the server to prevent tampering from the client.
+// Prices are in cents.
+const products = {
+  1: { price: 200, name: "Regular Lemonade" },
+  2: { price: 200, name: "Raspberry Lemonade" },
+  3: { price: 200, name: "Watermelon Lemonade" },
+};
+
+const calculateOrderAmount = (items) => {
+  let total = 0;
+  for (const item of items) {
+    const product = products[item.id];
+    if (product) {
+      // Ensure quantity is a positive integer
+      const quantity = Math.max(0, Math.floor(item.quantity || 0));
+      total += product.price * quantity;
+    }
+  }
+  return total;
+};
+
 app.post("/create-payment-intent", async (req, res) => {
   try {
-    const { amount } = req.body;
+    const { items } = req.body;
+    const amount = calculateOrderAmount(items);
+
+    if (amount <= 0) {
+      return res
+        .status(400)
+        .send({ error: { message: "Invalid order amount." } });
+    }
 
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: amount,
+      amount,
       currency: "cad",
       automatic_payment_methods: {
         enabled: true,
