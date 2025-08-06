@@ -5,7 +5,7 @@ import regularLemonade from "../assets/images/regular-lemonade.png";
 export const products = [
   {
     id: 1,
-    name: 'Regular Lemonade"',
+    name: "Regular Lemonade",
     price: 2,
     description:
       "The classic lemonade made with ice to keep you cool on a hot summer day!",
