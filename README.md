@@ -7,8 +7,9 @@
 
 ---
 
-<!-- Optionally add an app screenshot if available -->
-<!-- ![Lululemonade app screenshot](./public/images/app-screenshot.png "Lululemonade main UI") -->
+![Lululemonade app product page](./public/shop.jpg "Lululemonade main UI")
+![Lululemonade app cart page](./public/cart.jpg "Lululemonade cart page")
+![Lululemonade app checkout page](./public/checkout.jpg "Lululemonade checkout page")
 
 ## Overview
 
