@@ -1,11 +1,9 @@
 # Lululemonade
 
-![Language: (LANGUAGE)](https://img.shields.io/badge/language-TODO-lightgrey)
-![Framework: (FRAMEWORK)](https://img.shields.io/badge/framework-TODO-lightgrey)
-![License: TODO](https://img.shields.io/badge/license-TODO-blue)
+![Language: (React)](https://img.shields.io/badge/react-lightgrey)
+![API: Stripe](https://img.shields.io/badge/stripe-purple)
 
-> **A [short description of what Lululemonade does].**  
-> *(e.g., "A playful full-stack web app for ...")*
+> **A fun mini web app for use as a lemonade stand to allow customers to make online digital purchases.**  
 
 ---
 
@@ -14,15 +12,13 @@
 
 ## Overview
 
-Lululemonade is ...  
-*(Brief paragraph about the app’s purpose, who it’s for, and what makes it interesting.)*
+*Lululemonade uses React.js framework for front-end and UI and Stripe API for cart, checkout and payment processing.*
 
 ### Core features
 
-- Feature 1
-- Feature 2
-- Feature 3
-- *(Add a bulleted list of the app’s main features)*
+- Select lemonade you want to purchase and add to cart
+- You can go to cart to edit, update, and delete product quantities
+- You can checkout with the top onlibe payment options using Stripes API
 
 ---
 
