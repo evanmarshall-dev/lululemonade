@@ -5,7 +5,7 @@
 
 ## Live Demo
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)]([https://my-app.vercel.app](https://lululemonade.netlify.app/))
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)]([https://my-app.vercel.app](https://lululemonade.netlify.app/)
 
 > **A fun mini web app for use as a lemonade stand to allow customers to make online digital purchases.**  
 
