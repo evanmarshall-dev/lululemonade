@@ -3,6 +3,8 @@
 ![Language: (React)](https://img.shields.io/badge/react-lightgrey)
 ![API: Stripe](https://img.shields.io/badge/stripe-purple)
 
+[Deployed App](https://lululemonade.netlify.app/)
+
 > **A fun mini web app for use as a lemonade stand to allow customers to make online digital purchases.**  
 
 ---
